@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# VSCode
+.vscode/
+
+# Project
+package-lock.json
+cypress/cucumber-results
+cypress/screenshots
