@@ -8,8 +8,8 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 The minimum requirements are:
 
-* node v16.16
-* npm 8.11.0
+* node v16.17
+* npm 8.15.0
 
 # Setup
 
