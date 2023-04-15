@@ -1,4 +1,4 @@
-# Cypress v10 + Cucumber Example
+# Cypress v12 + Cucumber Example
 
 This repository contains the base setup of an UI testing project, using Cypress v10 + Cucumber
 
@@ -8,8 +8,8 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 The minimum requirements are:
 
-* node v16.17
-* npm 8.15.0
+* node v18.16
+* npm 9.5.1
 
 # Setup
 
@@ -26,7 +26,7 @@ npm install
 To run the tests in headless mode, go to main directory and execute:
 
 ```
-npm run tests
+npm run execution
 ```
 
 To open the Cypress IDE, run:
@@ -37,22 +37,14 @@ npm run open
 
 # Results
 
-Once the execution has finished, a cucumber report will be generated in the '/cucumber-results/cucumber-report.json' file.
+Once the execution (only with 'npm run tests') has finished:
 
-To get an HTML Report with the results, execute:
+A cucumber report will be generated in the '/cucumber-results/cucumber.json' file.
 
-```
-npm run report
-```
-
-The report will be generated in the '/cucumber-results/html/index.html' file.
+An html report will also be generated in the '/cucumber-results/report.html' file.
 
 # Links
     
 [Cypress](<https://www.cypress.io/>)
 
 [cypress-cucumber-preprocessor](<https://github.com/badeball/cypress-cucumber-preprocessor>)
-
-[multiple-cucumber-html-reporter](<https://github.com/wswebcreation/multiple-cucumber-html-reporter>)
-
-[cucumber-json-report-formatter](<https://github.com/Vitalizzzer/cucumber-json-report-formatter>)

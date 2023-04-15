@@ -1,22 +1,19 @@
 {
   "name": "cypress-v10-cucumber-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cypress v10 + Cucumber example project",
   "main": "index.js",
   "author": "ChristianAA",
   "license": "MIT",
   "scripts": {
-    "tests": "npx cypress run --browser=chrome",
-    "open": "npx cypress open",
-    "report": "node ./cypress/support/cucumber-html-report.js"
+    "execution": "npx cypress run --browser=chrome",
+    "open": "npx cypress open"
   },
   "devDependencies": {
-    "cypress": "10.7.0",
-    "@badeball/cypress-cucumber-preprocessor": "12.2.0",
-    "@cypress/webpack-preprocessor": "5.12.0",
-    "node-polyfill-webpack-plugin": "2.0.1",
-    "multiple-cucumber-html-reporter": "1.21.4",
-    "cucumber-json-report-formatter": "0.0.9"
+    "cypress": "12.9.0",
+    "@badeball/cypress-cucumber-preprocessor": "16.0.3",
+    "@cypress/webpack-preprocessor": "16.0.3",
+    "node-polyfill-webpack-plugin": "2.0.1"
   },
   "cypress-cucumber-preprocessor": {
     "omitFiltered": true,
@@ -29,11 +26,11 @@
     },
     "json": {
         "enabled": true,
-        "formatter": "node",
-        "args": [
-            "cypress/support/cucumber-report-formatter.js"
-        ],
-        "output": "cypress/cucumber-results/latestFormatProcess.log"
+        "output": "cypress/cucumber-results/cucumber.json"
+    },
+    "html": {
+      "enabled": true,
+      "output": "cypress/cucumber-results/report.html"
     }
 }
 }
