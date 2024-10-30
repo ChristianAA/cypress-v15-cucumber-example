@@ -1,7 +1,8 @@
 const { defineConfig } = require("cypress");
-const webpack = require("@cypress/webpack-preprocessor");
-const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const { addCucumberPreprocessorPlugin, afterRunHandler} = require("@badeball/cypress-cucumber-preprocessor");
+const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
+const NodeModulesPolyfillPlugin = require("@esbuild-plugins/node-modules-polyfill").NodeModulesPolyfillPlugin;
 
 module.exports = defineConfig({
   requestTimeout: 30000, 
@@ -20,33 +21,15 @@ module.exports = defineConfig({
 
 async function setupNodeEvents(on, config) {
 
-  await preprocessor.addCucumberPreprocessorPlugin(on, config);
+  await addCucumberPreprocessorPlugin(on, config, { });
     
-
   on(
     "file:preprocessor",
-    webpack({
-      webpackOptions: {
-        resolve: {
-          extensions: [".ts", ".js"],
-        },
-        plugins: [
-          new NodePolyfillPlugin()
-        ],        
-        module: {
-          rules: [
-            {
-              test: /\.feature$/,
-              use: [
-                {
-                  loader: "@badeball/cypress-cucumber-preprocessor/webpack",
-                  options: config,
-                },
-              ],
-            },
-          ],
-        },
-      },
+    createBundler({
+      plugins: [
+        NodeModulesPolyfillPlugin(),
+        createEsbuildPlugin(config),
+      ],
     })
   );
 

@@ -1,7 +1,7 @@
 import {domInteractionsUtils} from "../utils/domInteractionsUtils";
 
-const searchInput = "#search_form_input_homepage";
-const searchButton = "#search_button_homepage";
+const searchInput = "#searchbox_homepage";
+const searchButton = "#searchbox_homepage [type='submit']";
 
 export const navigateToBaseUrl = function () {
   cy.visit('/') 
