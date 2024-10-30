@@ -1,4 +1,4 @@
-# Cypress v12 + Cucumber Example
+# Cypress v13 + Cucumber Example
 
 This repository contains the base setup of an UI testing project, using Cypress v10 + Cucumber
 

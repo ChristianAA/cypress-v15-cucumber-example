@@ -1,7 +1,7 @@
 {
-  "name": "cypress-v10-cucumber-example",
-  "version": "1.0.1",
-  "description": "Cypress v10 + Cucumber example project",
+  "name": "cypress-v13-cucumber-example",
+  "version": "1.1.0",
+  "description": "Cypress v13 + Cucumber example project",
   "main": "index.js",
   "author": "ChristianAA",
   "license": "MIT",
@@ -10,10 +10,10 @@
     "open": "npx cypress open"
   },
   "devDependencies": {
-    "cypress": "12.9.0",
-    "@badeball/cypress-cucumber-preprocessor": "16.0.3",
-    "@cypress/webpack-preprocessor": "16.0.3",
-    "node-polyfill-webpack-plugin": "2.0.1"
+    "@badeball/cypress-cucumber-preprocessor": "21.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "0.2.2",
+    "cypress": "13.15.1"
   },
   "cypress-cucumber-preprocessor": {
     "omitFiltered": true,
@@ -32,5 +32,5 @@
       "enabled": true,
       "output": "cypress/cucumber-results/report.html"
     }
-}
+  }
 }
