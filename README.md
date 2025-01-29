@@ -1,6 +1,6 @@
-# Cypress v13 + Cucumber Example
+# Cypress v14 + Cucumber Example
 
-This repository contains the base setup of an UI testing project, using Cypress v10 + Cucumber
+This repository contains the base setup of an UI testing project, using Cypress v14 + Cucumber
 
 A simple search in DuckDuckGo to check that results are displayed is used as example
 
