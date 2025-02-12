@@ -37,7 +37,7 @@ npm run open
 
 # Results
 
-Once the execution (only with 'npm run tests') has finished:
+Once the execution (only with 'npm run execution') has finished:
 
 A cucumber report will be generated in the '/cucumber-results/cucumber.json' file.
 
