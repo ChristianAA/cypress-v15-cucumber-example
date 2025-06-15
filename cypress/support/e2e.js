@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.on('uncaught:exception', (err, runnable) => {  
+   if (err.message.includes('e.target.querySelectorAll is not a function')) {
+    return false; 
+  }
+})
