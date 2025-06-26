@@ -10,23 +10,23 @@
     "open": "npx cypress open"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "22.0.0",
+    "@badeball/cypress-cucumber-preprocessor": "22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.4",
     "@esbuild-plugins/node-modules-polyfill": "0.2.2",
-    "cypress": "14.0.1"
+    "cypress": "14.5.0"
   },
   "cypress-cucumber-preprocessor": {
     "omitFiltered": true,
     "stepDefinitions": [
-        "cypress/e2e/step_definitions/**/*.{js,ts}"
+      "cypress/e2e/step_definitions/**/*.{js,ts}"
     ],
     "messages": {
-        "enabled": true,
-        "output": "cypress/cucumber-results/cucumber-messages.ndjson"
+      "enabled": true,
+      "output": "cypress/cucumber-results/cucumber-messages.ndjson"
     },
     "json": {
-        "enabled": true,
-        "output": "cypress/cucumber-results/cucumber.json"
+      "enabled": true,
+      "output": "cypress/cucumber-results/cucumber.json"
     },
     "html": {
       "enabled": true,
