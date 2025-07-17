@@ -12,6 +12,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   video: false,
   screenshotsFolder: "cypress/screenshots",
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',   
   e2e: {
     baseUrl: "https://duckduckgo.com/",	
     specPattern: "**/*.feature",

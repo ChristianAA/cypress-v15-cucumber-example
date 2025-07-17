@@ -1,3 +1,5 @@
+[![Daily Cypress Tests](https://github.com/ChristianAA/cypress-v14-cucumber-example/actions/workflows/daily-test.yml/badge.svg)](https://github.com/ChristianAA/cypress-v14-cucumber-example/actions/workflows/daily-test.yml)
+
 # Cypress v14 + Cucumber Example
 
 This repository contains the base setup of an UI testing project, using Cypress v14 + Cucumber
