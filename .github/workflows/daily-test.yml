@@ -27,3 +27,10 @@ jobs:
 
       - name: Run Cypress tests with Chrome and Xvfb
         run: xvfb-run npx cypress run --browser chrome
+
+      - name: Upload Cypress screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
