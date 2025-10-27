@@ -1,8 +1,8 @@
 const { defineConfig } = require("cypress");
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const { addCucumberPreprocessorPlugin, afterRunHandler} = require("@badeball/cypress-cucumber-preprocessor");
+const { addCucumberPreprocessorPlugin, afterRunHandler } = require("@badeball/cypress-cucumber-preprocessor");
 const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
-const NodeModulesPolyfillPlugin = require("@esbuild-plugins/node-modules-polyfill").NodeModulesPolyfillPlugin;
+const { nodeModulesPolyfillPlugin } = require('esbuild-plugins-node-modules-polyfill');
 
 module.exports = defineConfig({
   requestTimeout: 30000, 
@@ -28,7 +28,7 @@ async function setupNodeEvents(on, config) {
     "file:preprocessor",
     createBundler({
       plugins: [
-        NodeModulesPolyfillPlugin(),
+        nodeModulesPolyfillPlugin(),
         createEsbuildPlugin(config),
       ],
     })
