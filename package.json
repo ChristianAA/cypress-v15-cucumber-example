@@ -10,7 +10,7 @@
     "open": "npx cypress open"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "23.1.0",
+    "@badeball/cypress-cucumber-preprocessor": "23.2.1",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.7",
     "esbuild-plugins-node-modules-polyfill": "1.7.1",
     "cypress": "15.5.0"

@@ -10,7 +10,7 @@ A simple search in DuckDuckGo to check that results are displayed is used as exa
 
 The minimum requirements are:
 
-* node v18.16
+* node v24.10.0 
 * npm 9.5.1
 
 # Setup
